@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://good123:good123@thegoodneighbor-zhvmf.mongodb.net/test?retryWrites=true"
+  "mongoURI": "mongodb+srv://good123:good123@thegoodneighbor-zhvmf.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "mysecrettoken"
 }
