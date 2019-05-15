@@ -6,7 +6,7 @@ const ProfileSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
   },
-  bootcamp: {
+  school: {
     type: String
   },
   location: {
