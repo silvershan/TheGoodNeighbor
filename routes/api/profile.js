@@ -53,7 +53,7 @@ router.post(
       check('status', 'Status is required')
       .not()
       .isEmpty(),
-      check('bootcamp', 'Your Bootcamp is required')
+      check('school', 'Your school is required')
       .not()
       .isEmpty(),
       check('skills', 'Skills are required')
@@ -71,7 +71,7 @@ router.post(
 
     const {
       company,
-      bootcamp,
+      school,
       website,
       location,
       bio,
@@ -79,6 +79,9 @@ router.post(
       githubusername,
       skills,
       linkedin,
+      facebook,
+      twitter,
+      instagram,
       youtube
     } = req.body;
 
@@ -86,7 +89,7 @@ router.post(
     const profileFields = {};
     profileFields.user = req.user.id;
     //checks to see if these values exist first before setting them in the database
-    if (bootcamp) profileFields.bootcamp = bootcamp;
+    if (school) profileFields.school = school;
     if (company) profileFields.company = company;
     if (website) profileFields.website = website;
     if (location) profileFields.location = location;
@@ -100,7 +103,10 @@ router.post(
     //Object that holds the social media links
     profileFields.social = {};
     if (youtube) profileFields.social.youtube = youtube;
+    if (twitter) profileFields.social.twitter = twitter;
+    if (facebook) profileFields.social.facebook = facebook;
     if (linkedin) profileFields.social.linkedin = linkedin;
+    if (instagram) profileFields.social.instagram = instagram;
 
     try {
       //look for profile by user id
@@ -201,14 +207,14 @@ router.delete('/', auth, async (req, res) => {
 });
 
 //route: PUT api/profile/education
-//description: Add bootcamp and other education to profile
+//description: Add school and other education to profile
 //access: Private
 router.put(
   '/education',
   [
     auth,
     [
-      check('school', 'School/Bootcamp is required')
+      check('school', 'School/school is required')
         .not()
         .isEmpty(),
       check('fieldofstudy', 'Field of study is required')
@@ -259,7 +265,7 @@ router.put(
 );
 
 //route: DELETE api/profile/education/:edu_id
-//description: Delete bootcamp or other education from profile
+//description: Delete school or other education from profile
 //access: Private
 router.delete('/education/:edu_id', auth, async (req, res) => {
   try {
