@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Fragment, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -44,12 +43,14 @@ const CreateProfile = ({ createProfile, history }) => {
   } = formData;
 
   //whatever is the value of the select list will be put in that part of the state of the form field
-  const onChange = e => setFormData({...formData, [e.target.name]: e.target.value});
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = e => {
     e.preventDefault();
     createProfile(formData, history);
-  }
+  };
+
 
   return (
     <Fragment>
@@ -61,7 +62,7 @@ const CreateProfile = ({ createProfile, history }) => {
         profile stand out
       </p>
       <small>* = required field</small>
-      <form className="form" onSubmit={e => onSubmit(e)}>
+      <form className='form' onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
             <option value="0">* Select Professional Status</option>
@@ -143,7 +144,9 @@ const CreateProfile = ({ createProfile, history }) => {
         </Fragment>}
 
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
+          <Link className='btn btn-light my-1' to='/dashboard'>
+            Go Back
+          </Link>
       </form>
     </Fragment>
   )
@@ -152,5 +155,7 @@ const CreateProfile = ({ createProfile, history }) => {
 CreateProfile.propTypes = {
   createProfile: PropTypes.func.isRequired
 };
-
-export default connect(null, {createProfile })(withRouter(CreateProfile));
+export default connect(
+  null,
+  { createProfile }
+)(withRouter(CreateProfile));
