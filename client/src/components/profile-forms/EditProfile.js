@@ -48,6 +48,7 @@ const EditProfile = ({
           youtube: loading || !profile.social ? '' : profile.youtube,
           instagram: loading || !profile.social ? '' : profile.instagram
         });
+        // eslint-disable-next-line
        }, [loading, getCurrentProfile]);
 
   //destructuring the above field so they can be used as variables

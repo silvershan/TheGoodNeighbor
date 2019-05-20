@@ -345,6 +345,9 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 // @access   Public
 router.get('/github/:username', (req, res) => {
   try {
+    //grabs the repo from github by the username, client ID and secret
+    //limits number of repos to 5
+    //ascends by date
     const options = {
       uri: `https://api.github.com/users/${
         req.params.username
@@ -361,7 +364,7 @@ router.get('/github/:username', (req, res) => {
       if (response.statusCode !== 200) {
         return res.status(404).json({ msg: 'No Github profile found' });
       }
-
+      //returns github repos
       res.json(JSON.parse(body));
     });
   } catch (err) {
