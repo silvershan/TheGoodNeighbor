@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 // eslint-disable-next-line
 import { connect } from 'react-redux';
+// eslint-disable-next-line
+import { deleteEducation } from '../../actions/profile';
 
-const Education = ({ education }) => {
+const Education = ({ education, deleteEducation }) => {
   //map through each education array
   const educations = education.map(edu => (
     <tr key={edu._id}>
@@ -22,7 +24,7 @@ const Education = ({ education }) => {
           )}
         </td>
         <td>
-          <button className='btn btn-danger'>Delete</button>
+          <button onClick={() => deleteEducation(edu._id)} className='btn btn-danger'>Delete</button>
         </td>
       </tr>
   ));
@@ -48,6 +50,7 @@ const Education = ({ education }) => {
 
 Education.propTypes = {
   education: PropTypes.array.isRequired,
-}
+  deleteEducation: PropTypes.func.isRequired
+};
 
-export default Education
+export default connect( null, { deleteEducation })(Education);
