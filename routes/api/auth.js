@@ -31,7 +31,7 @@ router.get('/', auth, async (req, res) => {
 router.post('/', [
     check('email', 'Please include a valid email').isEmail(),
     check('password', 'Password is required').exists()
-], 
+],
     async (req, res) => {
     const errors = validationResult(req);
     if(!errors.isEmpty()) {
@@ -52,7 +52,7 @@ router.post('/', [
     if(!isMatch) {
         return res.status(400).json({ errors: [{ msg: 'Invalid credentials' }] });
     }
-    
+
     const payload = {
         user: {
             id: user.id
@@ -60,7 +60,7 @@ router.post('/', [
     }
 
     jwt.sign(
-        payload, 
+        payload,
         config.get('jwtSecret'),
         { expiresIn: 3600000 },
         (err, token) => {

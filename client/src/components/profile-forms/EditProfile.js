@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Fragment, useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -6,7 +5,12 @@ import { connect } from 'react-redux';
 import { createProfile, getCurrentProfile } from '../../actions/profile';
 
 //Creating the fields in the profile form
-const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentProfile, history }) => {
+const EditProfile = ({
+  profile: { profile, loading },
+  createProfile,
+  getCurrentProfile,
+  history
+}) => {
   const [formData, setFormData] = useState({
     company: '',
     school: '',
@@ -31,6 +35,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
 
       setFormData({
           company: loading || !profile.company ? '' : profile.company,
+          school: loading || !profile.school ? '' : profile.school,
           website: loading || !profile.website ? '' : profile.website,
           location: loading || !profile.location ? '' : profile.location,
           status: loading || !profile.status ? '' : profile.status,
@@ -42,9 +47,8 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
           linkedin: loading || !profile.social ? '' : profile.linkedin,
           youtube: loading || !profile.social ? '' : profile.youtube,
           instagram: loading || !profile.social ? '' : profile.instagram
-      });
-
-  }, [loading]);
+        });
+       }, [loading, getCurrentProfile]);
 
   //destructuring the above field so they can be used as variables
   const {

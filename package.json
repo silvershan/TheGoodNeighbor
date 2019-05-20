@@ -1,7 +1,7 @@
 {
-  "name": "thegoodneighbor",
+  "name": "devconnector",
   "version": "1.0.0",
-  "description": "neighborhood based social network app",
+  "description": "social network for bootcampers",
   "main": "server.js",
   "scripts": {
     "start": "node server",
@@ -27,6 +27,7 @@
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.6",
+    "passport": "^0.4.0",
     "request": "^2.88.0"
   },
   "devDependencies": {

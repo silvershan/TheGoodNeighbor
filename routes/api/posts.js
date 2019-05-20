@@ -280,7 +280,7 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
       .indexOf(req.params.comment_id);
 
     post.comments.splice(removeIndex, 1);
-    
+
     await post.save();
     //returns all the comments
     res.json(post.comments);
