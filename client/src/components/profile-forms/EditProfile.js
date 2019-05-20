@@ -48,7 +48,7 @@ const EditProfile = ({
           youtube: loading || !profile.social ? '' : profile.youtube,
           instagram: loading || !profile.social ? '' : profile.instagram
         });
-      }, [getCurrentProfile, loading, profile.bio, profile.company, profile.facebook, profile.githubusername, profile.instagram, profile.linkedin, profile.location, profile.school, profile.skills, profile.social, profile.status, profile.twitter, profile.website, profile.youtube]);
+       }, [loading, getCurrentProfile]);
 
   //destructuring the above field so they can be used as variables
   const {
