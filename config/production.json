@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://good123:good123@thegoodneighbor-zhvmf.mongodb.net/test?retryWrites=true",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "8982b52aeae66497cdc7",
+  "githubSecret": "3cc795f9a3260c43dfc268024af0d06c2187bf8a"
+}
