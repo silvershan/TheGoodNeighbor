@@ -22,7 +22,10 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
-import './App.css';
+//import css
+//import './App.css';
+import 'materialize-css/dist/css/materialize.min.css';
+
 
 if (localStorage.token) {
     setAuthToken(localStorage.token);
