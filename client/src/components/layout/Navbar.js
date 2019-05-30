@@ -20,8 +20,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
       </li>
       <li>
         <Link to='/dashboard'>
-        <i className="fas fa-user" /> {' '}
-        <span className="hide-sm">Dashboard</span>
+          <i className="fas fa-user" /> {' '}
+          <span className="hide-sm">Dashboard</span>
         </Link>
       </li>
       <li>
@@ -59,8 +59,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                   { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
                 </ul>
+              </div>
             </div>
-          </div>
       </nav>
     </div>
     );
@@ -76,3 +76,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { logout })(Navbar);
+
