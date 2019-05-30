@@ -25,7 +25,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
         </Link>
       </li>
       <li>
-        <a onClick={logout} href="#!">
+        <a onClick={logout} href="/login">
         <i className="fas fa-sign-out-alt"></i>{' '}
         <span className="hide-sm">Logout</span></a>
       </li>
@@ -56,7 +56,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
               <Link to='/'>
                 <i className="brand-logo" /> BootcampConnect
               </Link>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <ul id="nav-mobile" className="right hide-on-med-and-down">
                   { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
                 </ul>
             </div>
