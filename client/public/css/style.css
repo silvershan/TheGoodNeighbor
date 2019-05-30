@@ -20,6 +20,7 @@ body {
 a {
   color: var(--primary-color);
   text-decoration: none;
+  font-size: 25px;
 }
 
 ul {
@@ -143,11 +144,54 @@ button.btn.btn-light, button.btn.btn-primary {
   margin-right: 10px;
 }
 
-a.btn.btn-primary {
-  margin-top: -2px;
-}
-
 p.my-1 {
   font-size: 30px;
-  margin-left: -1px;
+  margin-left: -2px;
+}
+
+/*PROFILES PAGE*/
+
+button.btn.btn-danger {
+  margin-top: 20px;
+}
+
+a.btn.btn-light.my-1 {
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+button.btn.btn-light {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+a.btn.btn-primary {
+  margin-bottom: 30px;
+}
+
+p.lead, p {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+a.btn.btn-primary1 {
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+a.btn.btn-primary2 {
+  margin-top: 50px;
+}
+
+a.btn.btn-light1 {
+  margin-top: 40px;
+}
+
+p.post-date {
+  font-size: 20px;
+}
+
+button.btn.btn-danger2 {
+  margin-top: 50px;
+  margin-left: 20px;
 }

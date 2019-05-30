@@ -35,13 +35,13 @@ const PostItem = ({ addLike, removeLike, deletePost, auth, post: {_id, text, nam
             <button onClick={e => removeLike(_id)} type="button" className="btn btn-light">
               <i className="fas fa-thumbs-down"></i>
             </button>
-            <Link to={`/posts/${_id}`} className="btn btn-primary">
+            <Link to={`/posts/${_id}`} className="btn btn-primary2">
               Discussion {' '} {comments.length > 0 && (
                   <span className='comment-count'>{comments.length}</span>
               )}
             </Link>
             {!auth.loading && user === auth.user._id && (
-                <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger">
+                <button onClick={e => deletePost(_id)} type="button" className="btn btn-danger2">
                     <i className="fas fa-times" />
                 </button>
             )}
