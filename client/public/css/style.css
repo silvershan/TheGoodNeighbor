@@ -31,6 +31,7 @@ img {
 }
 
 /*NAVBAR*/
+
 .navTitle {
   font-size: 30px;
 }
@@ -78,9 +79,7 @@ img {
 
 .landing {
   position: relative;
-
   background: url('/img/coding.jpeg') no-repeat center center/cover;
-
   height: 100vh;
 }
 
@@ -97,5 +96,58 @@ img {
 }
 .x-large {
   margin-top: 20%;
-  color: red;
+  color: black;
+}
+
+a.btn.btn-primary, a.btn.btn-light {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+p.lead {
+  font-size: 30px;
+  color: black;
+}
+
+/*CREATE ACCOUNT PAGE*/
+
+div.form-group {
+  padding: 20px;
+}
+
+input.btn.btn-primary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+p.my-1 {
+  margin-left: 20px;
+}
+
+
+/*POSTS PAGE*/
+
+div.post.bg-white.p-1.my-1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+img.round-img {
+  height: 50%;
+  width: 50%;
+
+}
+
+button.btn.btn-light, button.btn.btn-primary {
+  margin-right: 10px;
+}
+
+a.btn.btn-primary {
+  margin-top: -2px;
+}
+
+p.my-1 {
+  font-size: 30px;
+  margin-left: -1px;
 }
