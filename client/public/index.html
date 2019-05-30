@@ -20,6 +20,16 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script type="text/javascript">
+      burgerToggle: function() {
+        let linksEl = document.querySelector('.narrowLinks');
+        if (linksEl.style.display === 'block') {
+          linksEl.style.display = 'none';
+        } else {
+          linksEl.style.display = 'block';
+        }
+      }
+    </script>
 
 
   </body>

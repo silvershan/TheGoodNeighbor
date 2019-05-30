@@ -59,10 +59,10 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                   { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
                 </ul>
-              </div>
             </div>
-      </nav>
-    </div>
+          </div>
+        </nav>
+      </div>
     );
 };
 
@@ -76,4 +76,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { logout })(Navbar);
-

@@ -30,8 +30,88 @@ img {
   width: 100%;
 }
 
-/*NAVBAR*/
 
+/*LANDING PAGE*/
+
+
+.landing {
+  position: relative;
+
+  background: url('/img/coding.jpeg') no-repeat center center/cover;
+
+  height: 100vh;
+}
+
+.landing-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.x-large {
+  margin-top: 20%;
+  color: black;
+}
+
+ a.btn.btn-primary, a.btn.btn-light {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+ p.lead {
+  font-size: 30px;
+  color: black;
+}
+
+ /*CREATE ACCOUNT PAGE*/
+
+ div.form-group {
+  padding: 20px;
+}
+
+ input.btn.btn-primary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+ p.my-1 {
+  margin-left: 20px;
+}
+
+
+ /*POSTS PAGE*/
+
+ div.post.bg-white.p-1.my-1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ img.round-img {
+  height: 50%;
+  width: 50%;
+
+ }
+
+ button.btn.btn-light, button.btn.btn-primary {
+  margin-right: 10px;
+}	}
+
+ a.btn.btn-primary {
+  margin-top: -2px;
+}
+
+ p.my-1 {
+  font-size: 30px;
+  margin-left: -1px;
+}
+
+/*NAVBAR*/
 .navTitle {
   font-size: 30px;
 }
@@ -70,84 +150,68 @@ img {
 .navbar .welcome span {
   margin-right: 0.6rem;
 }
+/* HAMBURGER MENU */
+nav {
 
+	a {
+	}
 
+	a:visited {
+	}
 
+	.navWide {
+		display: none;
+		margin: 0 auto;
 
-/*LANDING PAGE*/
+		.wideDiv {
+			text-align: center;
 
+			a {
+				text-decoration: none;
+				display: inline-block;
+				// Adjust padding to increase/decrease the space between links.
+				padding: 0 2em;
+			}
+		}
+	}
 
-.landing {
-  position: relative;
-  background: url('/img/coding.jpeg') no-repeat center center/cover;
-  height: 100vh;
+	/* Navbar is set to default with the "hamburger" and links on the left
+	side of the screen. To move to the right of the screen, simply
+	change the three "float: Left;" references to read "float: right;". */
+	.navNarrow {
+
+		i {
+			float: left;
+			cursor: pointer;
+			color: #FFF;
+		}
+
+		.narrowLinks {
+			display: none;
+
+			a {
+				text-decoration: none;
+				display: block;
+				float: left;
+				clear: left;
+				padding: 0.5em 0;
+			}
+		}
+	}
 }
 
-.landing-inner {
-  color: #fff;
-  height: 100%;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.x-large {
-  margin-top: 20%;
-  color: black;
-}
+/* Adjust breakpoint as desired to select when the "hamburger" menu is
+replaced by just the links. */
+@media (min-width: 480px) {
 
-a.btn.btn-primary, a.btn.btn-light {
-  margin-right: 20px;
-  margin-top: 20px;
-}
+	nav {
 
-p.lead {
-  font-size: 30px;
-  color: black;
-}
+		.navWide {
+			display: block;
+		}
 
-/*CREATE ACCOUNT PAGE*/
-
-div.form-group {
-  padding: 20px;
-}
-
-input.btn.btn-primary {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
-
-p.my-1 {
-  margin-left: 20px;
-}
-
-
-/*POSTS PAGE*/
-
-div.post.bg-white.p-1.my-1 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-img.round-img {
-  height: 50%;
-  width: 50%;
-
-}
-
-button.btn.btn-light, button.btn.btn-primary {
-  margin-right: 10px;
-}
-
-a.btn.btn-primary {
-  margin-top: -2px;
-}
-
-p.my-1 {
-  font-size: 30px;
-  margin-left: -1px;
+		.navNarrow {
+			display: none;
+		}
+	}
 }
