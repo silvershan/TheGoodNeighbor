@@ -23,7 +23,7 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 //import css
-//import './App.css';
+import './App.css';
 import 'materialize-css/dist/css/materialize.min.css';
 
 
