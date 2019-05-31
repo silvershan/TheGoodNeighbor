@@ -1,12 +1,42 @@
-/* ============== SASS STYLING ============== */
+/* ============== STYLING ============== */
+
+/* font-family: 'Audiowide', cursive;
+font-family: 'Roboto', sans-serif; */
 
 /* Global Styles */
 :root {
-  --primary-color: #17a2b8;
+  --primary-color: #093e46;
   --dark-color: #343a40;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
 }
 
 
@@ -22,6 +52,7 @@
 
 /* Text Styles*/
 .x-large {
+  font-family: 'Audiowide', cursive;
   font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -107,7 +138,7 @@
   background: var(--light-color);
   color: #333;
   padding: 0.4rem 1.3rem;
-  font-size: 1rem;
+  font-size: 1.2rem !important;
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
@@ -182,6 +213,7 @@
 }
 
 .btn:hover {
+  color: var(--primary-color);
   opacity: 0.8;
 }
 
@@ -274,8 +306,38 @@ button {
   background: var(--light-color);
 }
 
-/* Navbar */
-.navbar {
+/*LANDING PAGE*/
+
+.landing {
+  position: relative;
+  background: url('/img/coding.jpeg') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.landing-inner {
+  color: #fff;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+ a.btn.btn-primary, a.btn.btn-light {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+ p.lead {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* nav-wrapper */
+.nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -288,22 +350,32 @@ button {
   opacity: 0.9;
 }
 
-.navbar ul {
+.nav-wrapper ul {
   display: flex;
 }
 
-.navbar a {
+.nav-wrapper a {
   color: #fff;
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
-.navbar a:hover {
+.nav-wrapper a:hover {
   color: var(--primary-color);
 }
 
-.navbar .welcome span {
+.nav-wrapper .welcome span {
   margin-right: 0.6rem;
+}
+
+nav .brand-logo {
+    font-family: 'Audiowide', cursive;
+    position: relative !important;
+    padding-top: 5px !important;
+}
+
+nav ul a {
+    font-size: 1.2rem !important;
 }
 
 
@@ -316,9 +388,50 @@ button {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+  /* grid-template-columns: 1fr;
+  text-align: center; */
 }
 
+.profile ul {
+  display: none;
+}
+
+
 /* Profile Page */
+
+/* .profile-top img,
+.profile img {
+  width: 200px;
+  margin: auto;
+} */
+
+.profile-grid {
+  grid-template-areas:
+    'top'
+    'about'
+    'exp'
+    'edu'
+    'github';
+}
+
+.profile-about .skills {
+  flex-direction: column;
+}
+
+.dash-buttons a {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+
+.post {
+  grid-template-columns: 1fr;
+}
+.post a,
+.post button {
+  padding: 0.3rem 0.4rem;
+}
+
 .profile-grid {
   display: grid;
   grid-template-areas:
@@ -446,6 +559,22 @@ button {
   margin-bottom: 0.5rem;
 }
 
+/*Create Account Page*/
+
+div.form-group {
+ padding: 20px;
+}
+
+input.btn.btn-primary {
+ margin-top: 20px;
+ margin-bottom: 20px;
+ margin-left: 20px;
+}
+
+p.my-1 {
+ margin-left: 20px;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .container {
@@ -469,67 +598,68 @@ button {
     font-size: 1rem;
   }
 
-  /* Navbar */
-  .navbar {
-    display: block;
-    text-align: center;
+  /* nav-wrapper */
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    border-bottom: solid 1px var(--primary-color);
+    opacity: 0.9;
   }
 
-  .navbar ul {
+  .nav-wrapper ul {
     text-align: center;
     justify-content: center;
   }
 
-  .navbar h1 {
+  .nav-wrapper h1 {
     margin-bottom: 1rem;
   }
 
-  .navbar .welcome {
+  .nav-wrapper .welcome {
     display: none;
   }
 
-  /* Profiles Page */
-  .profile {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .navTitle {
+    font-size: 30px;
   }
 
-  .profile ul {
-    display: none;
+  .nav-wrapper a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
   }
 
-  /* Profile Page */
-
-  .profile-top img,
-  .profile img {
-    width: 200px;
-    margin: auto;
+  .nav-wrapper i {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
   }
 
-  .profile-grid {
-    grid-template-areas:
-      'top'
-      'about'
-      'exp'
-      'edu'
-      'github';
+  .nav-wrapper a:hover {
+    color: var(--primary-color);
   }
 
-  .profile-about .skills {
-    flex-direction: column;
+  .nav-wrapper .welcome span {
+    margin-right: 0.6rem;
   }
 
-  .dash-buttons a {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.2rem;
+  #nav-mobile {
+
   }
 
-  .post {
-    grid-template-columns: 1fr;
-  }
-  .post a,
-  .post button {
-    padding: 0.3rem 0.4rem;
+  nav .brand-logo {
+    margin-top: 0px !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+  .fa-code {
+    font-size: 40px;
   }
 }
