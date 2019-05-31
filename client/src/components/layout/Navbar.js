@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 
+
 const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
 
   const authLinks = (
@@ -52,16 +53,19 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
       <nav className="teal">
         <div className="nav-wrapper">
           <Link to='/' className="brand-logo">BootcampConnect</Link>
-          <ul id="nav-mobile" className="right hide-on-small-and-down">
-            { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
+          <Link to="/" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
+          <ul className="right hide-on-med-and-down">
+          { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
           </ul>
-        </div>
-      </nav>
+          <ul className="sidenav" id="mobile-demo">
+          { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
+          </ul>
+        </div> 
+      </nav>    
+      )
+    };
 
-    );
-};
-
-Navbar.propTypes = {
+  Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired
 };
