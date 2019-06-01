@@ -1,4 +1,4 @@
-import { 
+import {
     GET_POSTS,
     POST_ERROR,
     UPDATE_LIKES,
@@ -65,7 +65,7 @@ export default function(state = initialState, action){
         case REMOVE_COMMENT:
             return {
               ...state,
-              post: { 
+              post: {
                 ...state.post,
                 comments: state.post.comments.filter(
                   comment => comment._id !== payload
@@ -77,4 +77,3 @@ export default function(state = initialState, action){
             return state;
     }
 }
-
