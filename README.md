@@ -37,6 +37,13 @@ Run ```npm run dev``` in your terminal
 
 The app will run on localhost:3000/
 
+### Issues
+
+Working on an issue where the CSS appears different on localhost than Heroku.
+
+
+
+
 
 ## Built With
 
