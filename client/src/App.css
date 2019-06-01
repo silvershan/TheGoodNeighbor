@@ -40,14 +40,21 @@ img {
 }
 
 
+nav {
+    background-color: teal !important;
+    width: 100%;
+    height: 80px !important;
+}
+
+/* Icons */
+.material-icons {
+  font-size: 25px !important;
+}
+
+
 /* Utilities */
 .container {
-  max-width: 1100px;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  width: 90% !important;
 }
 
 /* Text Styles*/
@@ -74,7 +81,7 @@ img {
 }
 
 .text-primary {
-  color: var(--primary-color);
+  color: black !important;
 }
 
 .text-dark {
@@ -134,7 +141,7 @@ img {
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
   background: var(--light-color);
   color: #333;
   padding: 0.4rem 1.3rem;
@@ -316,7 +323,7 @@ button {
 
 .landing-inner {
   color: #fff;
-  height: 100%;
+  height: 80%;
   width: 80%;
   margin: auto;
   display: flex;
@@ -333,10 +340,12 @@ button {
 
  p.lead {
   font-size: 24px;
-  color: #fff;
+  color: black;
 }
 
 /* nav-wrapper */
+
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -351,7 +360,8 @@ button {
 }
 
 .nav-wrapper ul {
-  display: flex;
+  display: inline-flex;
+  float: right;
 }
 
 .nav-wrapper a {
@@ -370,12 +380,11 @@ button {
 
 nav .brand-logo {
     font-family: 'Audiowide', cursive;
-    position: relative !important;
     padding-top: 5px !important;
 }
 
 nav ul a {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
 }
 
 
@@ -396,14 +405,13 @@ nav ul a {
   display: none;
 }
 
+#dashboard {
+  font-size: 4rem;
+}
+
 
 /* Profile Page */
 
-/* .profile-top img,
-.profile img {
-  width: 200px;
-  margin: auto;
-} */
 
 .profile-grid {
   grid-template-areas:
@@ -419,9 +427,9 @@ nav ul a {
 }
 
 .dash-buttons a {
-  display: block;
-  width: 100%;
+  width: 25%;
   margin-bottom: 0.2rem;
+  padding-right: 2rem !important;
 }
 
 .post {
@@ -575,11 +583,20 @@ p.my-1 {
  margin-left: 20px;
 }
 
-/* Mobile Styles */
-@media (max-width: 700px) {
+/* Tablet Styles */
+@media (max-width: 993px) {
+
   .container {
-    margin-top: 8rem;
+    margin: 0 auto;
+    width: 100% !important;
   }
+
+  nav {
+      background-color: teal !important;
+      width: 100%;
+      height: 120px !important;
+  }
+
 
   .hide-sm {
     display: none;
@@ -587,7 +604,7 @@ p.my-1 {
 
   /* Text Styles */
   .x-large {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   .large {
@@ -612,9 +629,11 @@ p.my-1 {
     opacity: 0.9;
   }
 
+
   .nav-wrapper ul {
-    text-align: center;
-    justify-content: center;
+    display: inline-flex;
+    float: right;
+
   }
 
   .nav-wrapper h1 {
@@ -649,8 +668,111 @@ p.my-1 {
     margin-right: 0.6rem;
   }
 
-  #nav-mobile {
+  .brand-logo {
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+}
 
+  .fa-code {
+    font-size: 40px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 680px) {
+
+  nav {
+      background-color: teal !important;
+      width: 100%;
+      height: 120px !important;
+  }
+
+  .ul-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ul-container ul {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hide-sm {
+    display: none;
+  }
+
+  /* Text Styles */
+  .x-large {
+    font-size: 2.1rem;
+  }
+
+  .large {
+    font-size: 1.9rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  /* nav-wrapper */
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 2rem;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    border-bottom: solid 1px var(--primary-color);
+    opacity: 0.9;
+  }
+
+
+  .nav-wrapper ul {
+    display: inline-flex;
+    float: none;
+    padding-top: 15%;
+
+  }
+
+  .nav-wrapper h1 {
+    margin-bottom: 1rem;
+  }
+
+  .nav-wrapper .welcome {
+    display: none;
+  }
+
+  .navTitle {
+    font-size: 25px;
+  }
+
+  .nav-wrapper a {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+  }
+
+  .nav-wrapper i {
+    color: #fff;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+  }
+
+  .nav-wrapper a:hover {
+    color: var(--primary-color);
+  }
+
+  .nav-wrapper .welcome span {
+    margin-right: 0.6rem;
+  }
+
+  .brand-logo {
+    font-size: 2rem !important;
+    text-align: center !important;
   }
 
   nav .brand-logo {

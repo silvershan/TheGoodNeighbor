@@ -50,18 +50,19 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout}) => {
   );
 
     return (
-      <nav className="teal">
-        <div className="nav-wrapper">
-          <Link to='/' className="brand-logo">BootcampConnect</Link>
-          <Link to="/" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
-          <ul className="right hide-on-med-and-down">
-          { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
-          </ul>
-          <ul className="sidenav" id="mobile-demo">
-          { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
-          </ul>
-        </div> 
-      </nav>    
+
+      <nav>
+        <div className="teal nav-wrapper">
+          <div className="container">
+          
+              <Link to='/' className="brand-logo">BootcampConnect</Link>
+
+            <div className="ul-container">
+              { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
+            </div>
+          </div>
+        </div>
+      </nav>
       )
     };
 

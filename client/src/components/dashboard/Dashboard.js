@@ -15,7 +15,7 @@ const Dashboard = ({getCurrentProfile, deleteAccount, auth: { user }, profile: {
   }, [getCurrentProfile]);
 
     return loading && profile === null ? (<Spinner />) : (<Fragment>
-        <h1 className="large text-primary">Dashboard</h1>
+        <h1 className="large text-primary" id="dashboard">Dashboard</h1>
         <p className="lead">
         <i className="fas fa-user"></i>Welcome { user && user.name }</p>
         {profile !== null ? (
@@ -26,7 +26,7 @@ const Dashboard = ({getCurrentProfile, deleteAccount, auth: { user }, profile: {
             {/*button to delete profile account*/}
             <div className="my-2">
               <button className="btn btn-danger" onClick={() => deleteAccount()}>
-                <i className="fas fa-user-minus"></i>Delete My Account
+                <i className="material-icons">clear</i>Delete My Account
               </button>
             </div>
         </Fragment>
