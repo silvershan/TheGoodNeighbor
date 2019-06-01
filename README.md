@@ -43,6 +43,18 @@ Working on an issue where the CSS appears different on localhost than Heroku.
 
 
 
+<img width="1152" alt="Screen Shot 2019-05-31 at 10 14 04 PM" src="https://user-images.githubusercontent.com/44039173/58744042-6e284280-83f1-11e9-9aa4-6243be18cd77.png">
+
+
+
+
+
+
+
+<img width="1258" alt="Screen Shot 2019-05-31 at 10 13 50 PM" src="https://user-images.githubusercontent.com/44039173/58744047-7c765e80-83f1-11e9-817f-4e4c731b06db.png">
+
+
+
 
 
 ## Built With
