@@ -17,7 +17,7 @@ const Dashboard = ({getCurrentProfile, deleteAccount, auth: { user }, profile: {
     return loading && profile === null ? (<Spinner />) : (<Fragment>
         <h1 className="large text-primary" id="dashboard">Dashboard</h1>
         <p className="lead">
-        <i className="fas fa-user"></i>Welcome { user && user.name }</p>
+        Welcome { user && user.name }</p>
         {profile !== null ? (
         <Fragment>
             <DashboardActions />
@@ -25,15 +25,15 @@ const Dashboard = ({getCurrentProfile, deleteAccount, auth: { user }, profile: {
             <Education education={profile.education} />
             {/*button to delete profile account*/}
             <div className="my-2">
-              <button className="btn btn-danger" onClick={() => deleteAccount()}>
-                <i className="material-icons">clear</i>Delete My Account
+              <button className="waves-effect waves-light btn btn-danger" onClick={() => deleteAccount()}>
+                <i className="text-primary"></i>Delete My Account
               </button>
             </div>
         </Fragment>
         ) : (
         <Fragment>
             <p>You have not yet set up a profile, please add some info</p>
-            <Link to='/create-profile' className="btn btn-primary my-1">
+            <Link to='/create-profile' className="waves-effect waves-light btn my-1">
             Create Profile
             </Link>
             </Fragment>

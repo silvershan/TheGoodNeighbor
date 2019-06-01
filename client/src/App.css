@@ -49,6 +49,7 @@ nav {
 /* Icons */
 .material-icons {
   font-size: 25px !important;
+  margin: 0px 5px 0px 0px;
 }
 
 
@@ -340,7 +341,7 @@ button {
 
  p.lead {
   font-size: 24px;
-  color: black;
+  color: #fff;
 }
 
 /* nav-wrapper */
@@ -429,7 +430,7 @@ nav ul a {
 .dash-buttons a {
   width: 25%;
   margin-bottom: 0.2rem;
-  padding-right: 2rem !important;
+  margin-right: 1.5rem !important;
 }
 
 .post {
